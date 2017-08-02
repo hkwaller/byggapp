@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import {
     BrowserRouter as Router,
     Route,
@@ -20,16 +20,36 @@ const configurationOptions = {
 
 firebase.initializeApp(configurationOptions)
 
-const App = () => (
-    <Router>
-        <div>
-            <Header />
+class App extends Component {
+    constructor() {
+        super()
 
-            <Route exact path="/" component={ Overview } />
-            <Route path="/topics" component={ Topics } />
-        </div>
-    </Router>
-)
+        this.state = {
+            data: []
+        }
+    }
+
+    componentWillMount() {
+        firebase.database().ref('/anbud').once('value').then(snapshot => {
+            this.setState({
+                data: snapshot.val()
+            })
+        })
+    }
+
+    render() {
+        return (
+            <Router>
+                <div>
+                    <Header />
+
+                    <Route exact path="/" render={(props) => <Overview data={this.state.data} {...props} />} />
+                    <Route path="/topics" component={ Topics } />
+                </div>
+            </Router>
+        )
+    }
+}
 
 const Topics = ({ match }) => (
     <div>

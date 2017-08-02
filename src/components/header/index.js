@@ -5,9 +5,10 @@ import './header.css'
 const Header = () => {
     return (
         <div className="header-container">
-            <img src={ logo } 
-                 className="header-image"
-                 alt="Bygggiganten logo" 
+            <img
+                src={ logo }
+                className="header-image"
+                alt="Bygggiganten logo"
             />
         </div>
     )

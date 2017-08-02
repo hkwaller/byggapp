@@ -1,0 +1,22 @@
+.anbud-list-item-container {
+    border: 1px solid black;
+    margin: 2em 2em;
+    padding: 0.5em 1em;
+}
+
+.information {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.customer-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.total-price {
+    margin-left: 0.2em;
+    font-size: 2em;
+}
