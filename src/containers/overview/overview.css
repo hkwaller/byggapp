@@ -1,0 +1,17 @@
+.new-assignment-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6em 0;
+}
+
+.new-assignment-btn {
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-assignment-btn svg {
+    margin-right: 1em;
+}
