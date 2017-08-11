@@ -7,21 +7,22 @@ import AnbudListItem from '../../components/anbud-list-item'
 import './overview.css'
 
 const Overview = props => {
-    console.log(props)
     return (
         <div className="overview-container">
             <div className="new-assignment-container">
-                <Link to="/new-assignment" className="new-assignment-btn">
+                <Link to={ `/newcustomer/${props.data.length + 1}` } className="new-assignment-btn">
                     <FaPlus color="black" />
                     Nytt anbud
                 </Link>
             </div>
             <div className="assignments-list-container">
-                <h2>Dina anbud</h2>
+                <h2>Alla anbud</h2>
                 {
-                    props.data.map(anbud => {
+                    Object.keys(props.data).map(key => {
                         return (
-                            <AnbudListItem key={ anbud.id } anbud={ anbud } />
+                            <Link key={ key } to={ `assignment/${key}` }>
+                                <AnbudListItem anbud={ props.data[key] } />
+                            </Link>
                         )
                     })
                 }

@@ -2,21 +2,21 @@ import React from 'react'
 
 import './anbud-list-item.css'
 
-const AnbudListItem = ({ anbud }) => {
+const AnbudListItem = props => {
     return (
         <div className="anbud-list-item-container">
-            <h3>{ anbud.description }</h3>
+            <h3>{ props.anbud.description } ({ Object.keys(props.anbud.tasks).length } uppdrag)</h3>
             <div className="information">
                 <div className="customer-container">
-                    <div>{ anbud.customer.name }</div>
-                    <div>{ anbud.customer.address }</div>
-                    <div>{ anbud.customer.zip } { anbud.customer.city }</div>
-                    <div>{ anbud.customer.phoneNumber }</div>
+                    <div>{ props.anbud.customer.name }</div>
+                    <div>{ props.anbud.customer.address }</div>
+                    <div>{ props.anbud.customer.zip } { props.anbud.customer.city }</div>
+                    <div>{ props.anbud.customer.phoneNumber }</div>
                 </div>
                 <div>
                     Totalpris:
                     <span className="total-price">
-                        { anbud.totalPrice },-
+                        { props.anbud.totalPrice },-
                     </span>
                 </div>
             </div>
