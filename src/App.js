@@ -5,6 +5,9 @@ import {
     Link,
 } from 'react-router-dom'
 import firebaseApp from './firebase'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import * as Actions from './actions'
 
 import './App.css'
 
@@ -15,29 +18,17 @@ import Assignment from './containers/assignment'
 import Header from './components/header'
 
 class App extends Component {
-    constructor() {
-        super()
-
-        this.state = {
-            data: [],
-        }
-    }
-
     componentWillMount() {
-        firebaseApp.database().ref('/anbud').once('value').then(snapshot => {
-            this.setState({
-                data: snapshot.val(),
-            })
-        })
+        this.props.actions.fetchAnbud()
     }
-
     render() {
+        console.log(this.props)
         return (
             <Router>
                 <div style={ { padding: '2em' } }>
                     <Header />
 
-                    <Route exact path="/" render={ props => <Overview data={ this.state.data } { ...props } /> } />
+                    <Route exact path="/" render={ props => <Overview { ...props } /> } />
                     <Route path="/newcustomer/:id" component={ NewCustomer } />
                     <Route path="/assignment/:id" component={ Assignment } />
                 </div>
@@ -46,4 +37,15 @@ class App extends Component {
     }
 }
 
-export default App
+const mapStateToProps = state => ({
+    anbud: state.anbud,
+})
+
+const mapDispatchToProps = dispatch => ({
+    actions: bindActionCreators(Actions, dispatch),
+})
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(App)
