@@ -7,6 +7,7 @@ import AnbudListItem from '../../components/anbud-list-item'
 import './overview.css'
 
 const Overview = props => {
+    console.log(props.anbud)
     return (
         <div className="overview-container">
             <div className="new-assignment-container">
@@ -30,5 +31,7 @@ const Overview = props => {
         </div>
     )
 }
+
+
 
 export default Overview

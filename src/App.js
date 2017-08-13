@@ -4,7 +4,6 @@ import {
     Route,
     Link,
 } from 'react-router-dom'
-import firebaseApp from './firebase'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as Actions from './actions'
@@ -14,7 +13,6 @@ import './App.css'
 import Overview from './containers/overview'
 import NewCustomer from './containers/new-customer'
 import Assignment from './containers/assignment'
-
 import Header from './components/header'
 
 class App extends Component {
@@ -22,13 +20,12 @@ class App extends Component {
         this.props.actions.fetchAnbud()
     }
     render() {
-        console.log(this.props)
         return (
             <Router>
                 <div style={ { padding: '2em' } }>
                     <Header />
 
-                    <Route exact path="/" render={ props => <Overview { ...props } /> } />
+                    <Route exact path="/" render={ props => <Overview { ...this.props } /> } />
                     <Route path="/newcustomer/:id" component={ NewCustomer } />
                     <Route path="/assignment/:id" component={ Assignment } />
                 </div>
