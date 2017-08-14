@@ -1,18 +1,13 @@
 import {
-    FETCH_ANBUD,
+    REPLACE_ANBUD,
 } from '../constants/action-types'
 
-const initialState = {
-    anbud: [],
-}
+const initialState = {}
 
 export default function anbud(state = initialState, action) {
     switch (action.type) {
-        case FETCH_ANBUD:
-            return {
-                ...state,
-                anbud: state.anbud.concat(action.payload),
-            }
+        case REPLACE_ANBUD:
+            return Object.assign({}, action.value)
         default:
             return state
     }

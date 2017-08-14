@@ -1,13 +1,17 @@
 import * as types from '../constants/action-types'
 import firebaseApp from '../firebase'
 
-export function fetchAnbud() {
-    return dispatch => {
+export function listenToAnbudChanges() {
+    return (dispatch, getState) => {
         firebaseApp.database().ref('/anbud').on('value', snapshot => {
-            dispatch({
-                type: types.FETCH_ANBUD,
-                payload: snapshot.val(),
-            })
+            dispatch(replaceAnbud(snapshot.val()))
         })
+    }
+}
+
+export function replaceAnbud(payload) {
+    return {
+        type: types.REPLACE_ANBUD,
+        value: payload,
     }
 }

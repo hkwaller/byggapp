@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import {
     BrowserRouter as Router,
     Route,
-    Link,
 } from 'react-router-dom'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
@@ -17,7 +16,7 @@ import Header from './components/header'
 
 class App extends Component {
     componentWillMount() {
-        this.props.actions.fetchAnbud()
+        this.props.actions.listenToAnbudChanges()
     }
     render() {
         return (

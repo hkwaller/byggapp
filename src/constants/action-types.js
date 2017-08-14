@@ -1,5 +1,5 @@
-export const FETCH_ANBUD = 'FETCH_ANBUD'
 export const CREATE_ANBUD = 'CREATE_ANBUD'
 export const EDIT_ANBUD = 'EDIT_ANBUD'
+export const REPLACE_ANBUD = 'REPLACE_ANBUD'
 export const ADD_EMPLOYEE = 'ADD_EMPLOYEE'
 export const EDIT_EMPLOYEE = 'EDIT_EMPLOYEE'
