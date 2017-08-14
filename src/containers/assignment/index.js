@@ -1,33 +1,29 @@
-import React, { Component } from 'react'
-import firebase from 'firebase'
+import React from 'react'
+import { connect } from 'react-redux'
 
-class Assignment extends Component {
-    constructor() {
-        super()
-
-        this.state = {
-            data: {},
-        }
-    }
-
-    componentWillMount() {
-        firebase.database().ref(`/anbud/${this.props.match.params.id}`).once('value').then(snapshot => {
-            this.setState({
-                data: snapshot.val(),
-            })
-        })
-    }
-    
-    render() {
+function Assignment(props) {
+    if (Object.keys(props.anbud).length === 0) {
         return (
             <div>
-                im an already defined assignmnet by the name of { this.state.data.id }
-                <hr />customer is: { this.state.data.customer ? this.state.data.customer.name : undefined }
+                im loading yo
             </div>
         )
     }
+    
+    const anbud = props.anbud[props.match.params.id]
+
+    return (
+        <div>
+            im an already defined assignmnet by the name of { anbud.id }
+            <hr />customer is: { anbud.customer.name }
+        </div>
+    )
 }
 
+const mapStateToProps = state => ({
+    anbud: state.anbud,
+})
 
-
-export default Assignment
+export default connect(
+    mapStateToProps,
+)(Assignment)
