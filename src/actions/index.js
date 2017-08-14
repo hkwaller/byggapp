@@ -2,7 +2,7 @@ import * as types from '../constants/action-types'
 import firebaseApp from '../firebase'
 
 export function listenToAnbudChanges() {
-    return (dispatch, getState) => {
+    return dispatch => {
         firebaseApp.database().ref('/anbud').on('value', snapshot => {
             dispatch(replaceAnbud(snapshot.val()))
         })

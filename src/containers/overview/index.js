@@ -11,7 +11,7 @@ const Overview = props => {
         <div className="overview-container">
             <div className="new-assignment-container">
                 {
-                    <Link to={ `/newcustomer/${props.anbud.length + 1}` } className="new-assignment-btn">
+                    <Link to={ `/newcustomer/${Object.keys(props.anbud).length + 1}` } className="new-assignment-btn">
                         <FaPlus color="black" />
                     Nytt anbud
                     </Link>
