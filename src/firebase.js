@@ -1,10 +1,15 @@
 import * as firebase from 'firebase'
+import {
+    apiKey,
+    authDomain,
+    databaseURL,
+} from './config'
 
 const configurationOptions = {
     debug: true,
-    apiKey: 'AIzaSyCYNOeLu-OgvgkJrqTUEU0RfMiZxw9bPU0',
-    authDomain: 'bygggiganten-2185e.firebaseapp.com',
-    databaseURL: 'https://bygggiganten-2185e.firebaseio.com/',
+    apiKey: apiKey,
+    authDomain: authDomain,
+    databaseURL: databaseURL,
 }
 
 export default firebase.initializeApp(configurationOptions)

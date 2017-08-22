@@ -3,10 +3,17 @@ import { Link } from 'react-router-dom'
 import FaPlus from 'react-icons/lib/fa/plus'
 
 import AnbudListItem from '../../components/anbud-list-item'
+import Loader from '../../components/loader'
 
 import './overview.css'
 
 const Overview = props => {
+    if (Object.keys(props.anbud).length === 0) {
+        return (
+            <Loader />
+        )
+    }
+
     return (
         <div className="container">
             <div className="new-assignment-container">
@@ -32,7 +39,5 @@ const Overview = props => {
         </div>
     )
 }
-
-
 
 export default Overview

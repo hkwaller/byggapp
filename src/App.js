@@ -21,7 +21,7 @@ class App extends Component {
     render() {
         return (
             <Router>
-                <div className="container">
+                <div className="container" style={ { marginTop: '2em' } }>
                     <Header />
 
                     <Route exact path="/" render={ props => <Overview { ...this.props } /> } />
