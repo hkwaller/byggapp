@@ -21,7 +21,7 @@ class App extends Component {
     render() {
         return (
             <Router>
-                <div style={ { padding: '2em' } }>
+                <div className="container">
                     <Header />
 
                     <Route exact path="/" render={ props => <Overview { ...this.props } /> } />

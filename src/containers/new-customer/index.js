@@ -1,12 +1,17 @@
 import React from 'react'
 import { Form, Text } from 'react-form'
+import SubHeader from '../../components/sub-header'
+import './new-customer.css'
 
 const NewCustomer = props => {
     return (
-        <div>
+        <div className="container">
+            <SubHeader title={ 'Kund' } />
+        
             <Form
                 onSubmit={ values => {
                     console.log('Success!', values)
+                    console.log(props)
                 } }
                 validate={ ({ name }) => {
                     return {
@@ -16,9 +21,9 @@ const NewCustomer = props => {
             >
                 { ({ submitForm }) => {
                     return (
-                        <form onSubmit={ submitForm }>
-                            <Text field="name" />
-                            <button type="submit">Submit</button>
+                        <form onSubmit={ submitForm } className="form-container">
+                            <Text field="name" className="input-text" />
+                            <button type="submit" className="submit-btn">Fortsätt</button>
                         </form>
                     )
                 } }

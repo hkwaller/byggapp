@@ -8,12 +8,12 @@ import './overview.css'
 
 const Overview = props => {
     return (
-        <div className="overview-container">
+        <div className="container">
             <div className="new-assignment-container">
                 {
                     <Link to={ `/newcustomer/${Object.keys(props.anbud).length + 1}` } className="new-assignment-btn">
                         <FaPlus color="black" />
-                    Nytt anbud
+                        Nytt anbud
                     </Link>
                 }
             </div>

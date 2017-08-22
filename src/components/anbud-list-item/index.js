@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Customer from '../customer'
 import './anbud-list-item.css'
 
 const AnbudListItem = props => {
@@ -7,12 +7,7 @@ const AnbudListItem = props => {
         <div className="anbud-list-item-container">
             <h3>{ props.anbud.description } ({ Object.keys(props.anbud.tasks).length } uppdrag)</h3>
             <div className="information">
-                <div className="customer-container">
-                    <div>{ props.anbud.customer.name }</div>
-                    <div>{ props.anbud.customer.address }</div>
-                    <div>{ props.anbud.customer.zip } { props.anbud.customer.city }</div>
-                    <div>{ props.anbud.customer.phoneNumber }</div>
-                </div>
+                <Customer info={ props.anbud.customer } />
                 <div>
                     Totalpris:
                     <span className="total-price">
