@@ -16,7 +16,7 @@ import Header from './components/header'
 
 class App extends Component {
     componentWillMount() {
-        this.props.actions.listenToAnbudChanges()
+        this.props.actions.listenToChanges()
     }
     render() {
         return (

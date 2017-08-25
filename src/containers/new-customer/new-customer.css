@@ -5,21 +5,34 @@
     font-size: 1.3em;
     border: none;
     font-weight: 300;
-    position: absolute;
-    bottom: 2em;
+    align-self: center;
 }
 
 .form-container {
-    padding: 3em;
-    height: 90%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.5em 2em;
 }
 
 .input-text {
-    font-size: 1.2em;
-    border: none;
-    border-bottom: 2px solid black;
+    font-size: 1.4em;
+    line-height: 1.6em;
+    border: 2px solid black;
     padding: 0.2em 0.3em;
     box-shadow: none;
     border-radius: none;
     margin-bottom: 1em;
+    width: 90%
+}
+
+.FormInput {
+    width: 100%;
 }
