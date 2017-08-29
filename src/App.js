@@ -7,12 +7,14 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as Actions from './actions'
 
-import './App.css'
-
 import Overview from './containers/overview'
 import NewCustomer from './containers/new-customer'
 import Assignment from './containers/assignment'
+import DefineAssignments from './containers/define-assignments'
+import Categories from './containers/categories'
 import Header from './components/header'
+
+import './App.css'
 
 class App extends Component {
     componentWillMount() {
@@ -27,6 +29,8 @@ class App extends Component {
                     <Route exact path="/" render={ props => <Overview { ...this.props } /> } />
                     <Route path="/newcustomer/:id" component={ NewCustomer } />
                     <Route path="/assignment/:id" component={ Assignment } />
+                    <Route path="/define-assignments/:id" component={ DefineAssignments } />
+                    <Route path="/categories/:id" component={ Categories } />
                 </div>
             </Router>
         )

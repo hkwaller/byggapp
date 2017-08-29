@@ -1,5 +1,6 @@
 import React from 'react'
-import { Form, Text } from 'react-form'
+import { Form, Text, RadioGroup, Radio } from 'react-form'
+import { connect } from 'react-redux'
 import SubHeader from '../../components/sub-header'
 import './new-customer.css'
 
@@ -11,7 +12,7 @@ const NewCustomer = props => {
             <Form
                 onSubmit={ values => {
                     console.log('Success!', values)
-                    console.log(props)
+                    props.history.push(`/categories/${props.match.params.id}`)
                 } }
                 // validate={ ({ name }) => {
                 //     return {
@@ -38,10 +39,20 @@ const NewCustomer = props => {
                                 <label htmlFor="postort">Postort</label>
                                 <Text field="postort" className="input-text" />
                             </div>
-                            
                             <div className="item-container">
                                 <label htmlFor="telefonnummer">Telefonnummer</label>
                                 <Text field="telefonnummer" type="phoneNumber" className="input-text" />
+                            </div>
+                            <div className="item-container">
+                                <RadioGroup field="rutavdrag">
+                                    <label>Rutavdrag</label>
+                                    <Radio value="0" />
+                                    <label htmlFor="">0</label>
+                                    <Radio value="1" />
+                                    <label htmlFor="">1</label>
+                                    <Radio value="2" />
+                                    <label htmlFor="">2</label>
+                                </RadioGroup>
                             </div>
                             <div className="item-container">
                                 <button type="submit" className="submit-btn">Fortsätt</button>
@@ -54,4 +65,10 @@ const NewCustomer = props => {
     )
 }
 
-export default NewCustomer
+const mapStateToProps = state => ({
+    anbud: state.anbud,
+})
+
+export default connect(
+    mapStateToProps,
+)(NewCustomer)
