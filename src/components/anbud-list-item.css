@@ -1,7 +1,8 @@
 .anbud-list-item-container {
     border: 1px solid black;
     margin: 2em 0;
-    padding: 0.5em 1em;
+    border-radius: 1em;
+    padding: 1em 2em;
 }
 
 .information {

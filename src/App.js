@@ -7,12 +7,12 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as Actions from './actions'
 
-import Overview from './containers/overview'
-import NewCustomer from './containers/new-customer'
-import Assignment from './containers/assignment'
-import DefineAssignments from './containers/define-assignments'
-import Categories from './containers/categories'
-import Header from './components/header'
+import Overview from './containers/Overview'
+import NewCustomer from './containers/NewCustomer'
+import Assignment from './containers/Assignment'
+import DefineAssignments from './containers/DefineAssignments'
+import Categories from './containers/Categories'
+import Header from './components/Header'
 
 import './App.css'
 

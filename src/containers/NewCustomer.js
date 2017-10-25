@@ -1,7 +1,7 @@
 import React from 'react'
 import { Form, Text, RadioGroup, Radio } from 'react-form'
 import { connect } from 'react-redux'
-import SubHeader from '../../components/sub-header'
+import SubHeader from '../components/SubHeader'
 import './new-customer.css'
 
 const NewCustomer = props => {
@@ -46,7 +46,7 @@ const NewCustomer = props => {
                             <div className="item-container">
                                 <RadioGroup field="rutavdrag">
                                     <label>Rutavdrag</label>
-                                    <Radio value="0" />
+                                    <Radio value="0" checked={ true } />
                                     <label htmlFor="">0</label>
                                     <Radio value="1" />
                                     <label htmlFor="">1</label>

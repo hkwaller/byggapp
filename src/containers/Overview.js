@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import FaPlus from 'react-icons/lib/fa/plus'
 
-import AnbudListItem from '../../components/anbud-list-item'
-import Loader from '../../components/loader'
+import AnbudListItem from '../components/AnbudListItem'
+import Loader from '../components/Loader'
 
 import './overview.css'
 
