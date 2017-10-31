@@ -1,140 +1,163 @@
 {
-    "anbud": [
-        {
-            "customer": {
-                "address": "Turbinveien 11",
-                "city": "Oslo",
-                "name": "Hannes Waller",
-                "phoneNumber": "+4795005552",
-                "zip": "0195"
-            },
-            "date": "20170711",
-            "description": "Badrum och kök",
-            "employee": "10",
-            "id": "abc123",
-            "rot": 1,
-            "tasks": {
-                "1001": {
-                    "price": 1200,
-                    "type": "Rivning av badrum (Inkl bortforsling)"
-                },
-                "1002": {
-                    "extras": [
-                        {
-                            "description": "Gammalt hus",
-                            "id": 1,
-                            "price": 200
-                        }
-                    ],
-                    "price": 1100,
-                    "type": "Montering av förstärkningsskivor (inkl material)"
-                },
-                "2001": {
-                    "price": 1200,
-                    "type": "Spackling av väggar (inkl material)"
-                }
-            },
-            "totalPrice": 3700
+    "anbud" : [ {
+      "customer" : {
+        "address" : "Stensgata 36a",
+        "city" : "Oslo",
+        "name" : "Bubba Hgfdansson",
+        "phoneNumber" : "+4795005552",
+        "zip" : "0358"
+      },
+      "date" : "20170711",
+      "description" : "Badrum och kök",
+      "employee" : "10",
+      "id" : "abc123",
+      "rot" : 1,
+      "tasks" : {
+        "1001" : {
+          "price" : 1200,
+          "type" : "Rivning av badrum (Inkl bortforsling)"
         },
-        {
-            "customer": {
-                "address": "Turbinveien 11",
-                "city": "Oslo",
-                "name": "Hannes Waller",
-                "phoneNumber": "+4795005552",
-                "zip": "0195"
-            },
-            "date": "20170711",
-            "description": "Nytt fräckt sovrum",
-            "employee": "10",
-            "id": "abc500",
-            "rot": 1,
-            "tasks": {
-                "1001": {
-                    "price": 1200,
-                    "type": "Rivning av badrum (Inkl bortforsling)"
-                },
-                "2001": {
-                    "price": 1200,
-                    "type": "Spackling av väggar (inkl material)"
-                }
-            },
-            "totalPrice": 9320
+        "1002" : {
+          "extras" : [ {
+            "description" : "Gammalt hus",
+            "id" : 1,
+            "price" : 200
+          } ],
+          "price" : 1100,
+          "type" : "Montering av förstärkningsskivor (inkl material)"
         },
-        {
-            "customer": {
-                "address": "Turbinveien 11",
-                "city": "Oslo",
-                "name": "Hannes Waller",
-                "phoneNumber": "+4795005552",
-                "zip": "0195"
-            },
-            "date": "20170711",
-            "description": "Nytt fräckt sovrum",
-            "employee": "10",
-            "id": "abc500",
-            "rot": 1,
-            "tasks": {
-                "1001": {
-                    "price": 1200,
-                    "type": "Rivning av badrum (Inkl bortforsling)"
-                },
-                "2001": {
-                    "price": 1200,
-                    "type": "Spackling av väggar (inkl material)"
-                }
-            },
-            "totalPrice": 9320
+        "2001" : {
+          "price" : 1200,
+          "type" : "Spackling av väggar (inkl material)"
         }
-    ],
-    "employees": {
-        "10": {
-            "email": "henrik.skau@bygggiganten.se",
-            "name": "Henrik Skau",
-            "phoneNumber": "0768101112"
+      },
+      "totalPrice" : 3700
+    }, {
+      "customer" : {
+        "address" : "Turbinveien 11",
+        "city" : "Oslo",
+        "name" : "Hannes Baller",
+        "phoneNumber" : "+4795005552",
+        "zip" : "0195"
+      },
+      "date" : "20170711",
+      "description" : "Nytt fräckt sovrum",
+      "employee" : "10",
+      "id" : "abc500",
+      "rot" : 1,
+      "tasks" : {
+        "1001" : {
+          "price" : 1200,
+          "type" : "Rivning av badrum (Inkl bortforsling)"
         },
-        "11": {
-            "email": "bernt.wendelstig@bygggiganten.se",
-            "name": "Bernt Wendelstig",
-            "phoneNumber": "0738368109"
+        "2001" : {
+          "price" : 1200,
+          "type" : "Spackling av väggar (inkl material)"
         }
+      },
+      "totalPrice" : 16320
+    }, {
+      "customer" : {
+        "address" : "Turbinveien 11",
+        "city" : "Oslo",
+        "name" : "Hannes Waller",
+        "phoneNumber" : "+4795005552",
+        "zip" : "0195"
+      },
+      "date" : "20170711",
+      "description" : "Nytt fräckt sovrum",
+      "employee" : "10",
+      "id" : "abc500",
+      "rot" : 1,
+      "tasks" : {
+        "1001" : {
+          "price" : 1200,
+          "type" : "Rivning av badrum (Inkl bortforsling)"
+        },
+        "2001" : {
+          "price" : 1200,
+          "type" : "Spackling av väggar (inkl material)"
+        }
+      },
+      "totalPrice" : 9320
+    } ],
+    "drafts" : {
+      "4" : {
+        "customer" : {
+          "gatuaddress" : "Turbinveien 11",
+          "namn" : "Hannes Waller",
+          "postnummer" : "0195",
+          "postord" : "Oslo",
+          "rutavdrag" : "1",
+          "telefonnummer" : "95005552"
+        },
+        "date" : "Tue Oct 31 2017",
+        "rutavdrag" : "1"
+      }
     },
-    "uppdrag": {
-        "badrum": {
-            "1000": {
-                "price": 1000,
-                "type": "Rivning av badrum (Inkl bortforsling)"
+    "employees" : {
+      "10" : {
+        "email" : "henrik.skau@bygggiganten.se",
+        "name" : "Henrik Skau",
+        "phoneNumber" : "0768101112"
+      },
+      "11" : {
+        "email" : "bernt.wendelstig@bygggiganten.se",
+        "name" : "Bernt Wendelstig",
+        "phoneNumber" : "0738368109"
+      }
+    },
+    "uppdrag" : {
+      "100" : {
+        "namn": "Kök",
+        "tasks": [
+            {
+              "id": 1000,
+              "price" : 1000,
+              "type" : "Rivning av badrum (Inkl bortforsling)"
             },
-            "1001": {
-                "price": 950,
-                "type": "Borttagning av element (Inkl bortforsling)"
+            {
+              "id": 1001,
+              "price" : 950,
+              "type" : "Borttagning av element (Inkl bortforsling)"
             },
-            "1002": {
-                "price": 1200,
-                "type": "Montering av förstärkningsskivor (inkl material)"
+            {
+              "id": 1002,
+              "price" : 1200,
+              "type" : "Montering av förstärkningsskivor (inkl material)"
             },
-            "1003": {
-                "price": 800,
-                "type": "Montering av gipsskivor (inkl material)"
+            {
+              "id": 1003,
+              "price" : 800,
+              "type" : "Montering av gipsskivor (inkl material)"
             }
-        },
-        "kok": {
-            "2000": {
-                "price": 600,
-                "type": "Rivning av kök"
-            },
-            "2001": {
-                "price": 1200,
-                "type": "Spackling av väggar (inkl material)"
-            },
-            "2002": {
-                "price": 1300,
-                "type": "Spackling av tak  (inkl material)"
-            },
-            "2004": {
-                "price": 1100,
-                "type": "Målning av väggar"
-            }
-        }
+        ]
+      },
+      "101" : {
+          "namn": "Badrum",
+          "tasks": [
+              {
+                "id": 2000,
+                "price" : 600,
+                "type" : "Rivning av kök"
+              },
+              {
+                "id": 2001,
+                "price" : 1200,
+                "type" : "Spackling av väggar (inkl material)"
+              },
+              {
+                "id": 2002,
+                "price" : 1300,
+                "type" : "Spackling av tak  (inkl material)"
+              },
+              {
+                "id": 2004,
+                "price" : 1100,
+                "type" : "Målning av väggar"
+              }
+          ] 
+      }
     }
-}
+  }
+  
