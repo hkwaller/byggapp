@@ -1,14 +1,31 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as Actions from '../actions'
+import SubHeader from '../components/SubHeader'
 
-const Categories = props => {
-    return (
-        <div className="container">
-            <div className="category">Badrum</div>
-            <div className="category">Køk</div>
-            <div className="category">WC</div>
-            <div className="category">Sovrum</div>
-        </div>
-    )
+class Categories extends Component {
+    render() {
+        return (
+            <div className="container">
+                <SubHeader title={ 'Kategorier' } />
+                { Object.keys(this.props.uppdrag).map(key => {
+                    return <div key={ key } className="category">{ this.props.uppdrag[key].namn }</div>
+                }) }
+            </div>
+        )
+    }
 }
 
-export default Categories
+const mapStateToProps = state => ({
+    uppdrag: state.uppdrag,
+})
+
+const mapDispatchToProps = dispatch => ({
+    actions: bindActionCreators(Actions, dispatch),
+})
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Categories)

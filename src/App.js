@@ -39,6 +39,7 @@ class App extends Component {
 
 const mapStateToProps = state => ({
     anbud: state.anbud,
+    drafts: state.drafts,
 })
 
 const mapDispatchToProps = dispatch => ({

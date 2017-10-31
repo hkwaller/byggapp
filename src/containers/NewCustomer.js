@@ -1,6 +1,8 @@
 import React from 'react'
 import { Form, Text, RadioGroup, Radio } from 'react-form'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as Actions from '../actions'
 import SubHeader from '../components/SubHeader'
 import './new-customer.css'
 
@@ -11,7 +13,17 @@ const NewCustomer = props => {
         
             <Form
                 onSubmit={ values => {
+                    values = {
+                        namn: 'Hannes Waller',
+                        gatuaddress: 'Turbinveien 11',
+                        postnummer: '0195',
+                        postort: 'Oslo',
+                        telefonnummer: '95005552',
+                        rutavdrag: '1',
+                    }
+
                     console.log('Success!', values)
+                    props.actions.draftCustomer(values, props.match.params.id)
                     props.history.push(`/categories/${props.match.params.id}`)
                 } }
                 // validate={ ({ name }) => {
@@ -25,7 +37,7 @@ const NewCustomer = props => {
                         <form onSubmit={ submitForm } className="form-container">
                             <div className="item-container">
                                 <label htmlFor="name">Namn</label>
-                                <Text field="name" className="input-text" />
+                                <Text field="namn" className="input-text" />
                             </div>
                             <div className="item-container">
                                 <label htmlFor="gatuaddress">Gatuaddress</label>
@@ -69,6 +81,11 @@ const mapStateToProps = state => ({
     anbud: state.anbud,
 })
 
+const mapDispatchToProps = dispatch => ({
+    actions: bindActionCreators(Actions, dispatch),
+})
+
 export default connect(
     mapStateToProps,
+    mapDispatchToProps
 )(NewCustomer)

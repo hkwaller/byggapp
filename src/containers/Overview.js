@@ -18,7 +18,7 @@ const Overview = props => {
         <div className="container">
             <div className="new-assignment-container">
                 {
-                    <Link to={ `/newcustomer/${Object.keys(props.anbud).length + 1}` } className="new-assignment-btn">
+                    <Link to={ `/newcustomer/${Object.keys(props.anbud).length + Object.keys(props.drafts).length + 1}` } className="new-assignment-btn">
                         <FaPlus color="black" />
                         Nytt anbud
                     </Link>
@@ -31,6 +31,18 @@ const Overview = props => {
                         return (
                             <Link key={ key } to={ `assignment/${key}` }>
                                 <AnbudListItem anbud={ props.anbud[key] } />
+                            </Link>
+                        )
+                    })
+                }
+            </div>
+            <div className="assignments-list-container">
+                <h2>Ofärdiga anbud</h2>
+                {
+                    Object.keys(props.drafts).map(key => {
+                        return (
+                            <Link key={ key } to={ `assignment/${key}` }>
+                                <AnbudListItem anbud={ props.drafts[key] } />
                             </Link>
                         )
                     })
