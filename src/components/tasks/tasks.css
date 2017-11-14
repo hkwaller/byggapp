@@ -1,0 +1,11 @@
+.tasks-header-row {
+    text-align: left;
+}
+
+.tasks-header-left {
+   width: 70%;
+}
+
+.tasks-container {
+    margin-bottom: 1rem;
+}

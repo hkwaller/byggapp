@@ -1,6 +1,5 @@
 import React from 'react'
 import './information.css'
-import SubHeader from '../components/SubHeader'
 
 const Information = ({ rot, info }) => {
     console.log(info)

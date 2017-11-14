@@ -6,11 +6,18 @@ const SubHeader = ({ tasks }) => {
     console.log(tasks)
     return (
         <div className="tasks-container">
-            {
-                Object.keys(tasks).map(key => {
-                    return <Task key={ key } task={ tasks[key] } />
-                })
-            }
+            <h2>Arbetsbeskrivning</h2>
+            <table>
+                <tr className="tasks-header-row">
+                    <th className="tasks-header-left">Beskrivning</th>
+                    <th>Pris</th>
+                </tr>
+                {
+                    Object.keys(tasks).map(key => {
+                        return <Task key={ key } task={ tasks[key] } />
+                    })
+                }
+            </table>
         </div>
     )
 }

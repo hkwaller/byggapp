@@ -6,12 +6,12 @@ const AnbudListItem = props => {
     console.log(props)
     return (
         <div className="anbud-list-item-container">
-            <h3>
+            <h2>
                 { props.anbud.description || 'Okänt' } ({ props.anbud.tasks ? Object.keys(props.anbud.tasks).length : '0' } uppdrag)
-            </h3>
-            <div className="information">
+            </h2>
+            <div>
                 <Customer info={ props.anbud.customer } />
-                <div>
+                <div className="anbud-list-item-information">
                     Totalpris:
                     <span className="total-price">
                         { props.anbud.totalPrice },-

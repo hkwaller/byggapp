@@ -10,6 +10,10 @@
     box-shadow: -5px 5px 50px #888888;
 }
 
+.anbud-list-item-information {
+    text-align: right;
+}
+
 .information {
     display: flex;
     flex-direction: row;
