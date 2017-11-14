@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import Loader from '../components/Loader'
 import SubHeader from '../components/SubHeader'
 import Customer from '../components/Customer'
+import Information from '../components/Information'
 import Tasks from '../components/tasks/Tasks'
 import './assignment.css'
 
@@ -12,13 +13,13 @@ function Assignment(props) {
             <Loader />
         )
     }
-    
     const anbud = props.anbud[props.match.params.id]
 
     return (
         <div className="assignment-container">
             <SubHeader title={ anbud.description } />
             <Customer info={ anbud.customer } />
+            <Information rot={ anbud.rot } info={ anbud.info } />
             <Tasks tasks={ anbud.tasks } />
         </div>
     )

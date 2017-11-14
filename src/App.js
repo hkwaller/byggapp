@@ -28,9 +28,9 @@ class App extends Component {
 
                     <Route exact path="/" render={ props => <Overview { ...this.props } /> } />
                     <Route path="/newcustomer/:id" component={ NewCustomer } />
-                    <Route path="/assignment/:id" component={ Assignment } />
-                    <Route path="/define-assignments/:id" component={ DefineAssignments } />
                     <Route path="/categories/:id" component={ Categories } />
+                    <Route path="/define-assignments/:id" component={ DefineAssignments } />
+                    <Route path="/assignment/:id" component={ Assignment } />
                 </div>
             </Router>
         )

@@ -3,6 +3,11 @@
     margin: 2em 0;
     border-radius: 1em;
     padding: 1em 2em;
+    transition: box-shadow 0.1s ease-in-out;
+}
+
+.anbud-list-item-container:hover {
+    box-shadow: -5px 5px 50px #888888;
 }
 
 .information {

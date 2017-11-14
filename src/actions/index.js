@@ -51,23 +51,34 @@ export function listenToEmployeesChanges() {
     }
 }
 
-export function draftCustomer(employee, id) {
+export function draftCustomer(customer, id) {
     return dispatch => {
         firebaseApp.database().ref(`/drafts/${id}`).set({
             date: new Date().toDateString(),
-            rutavdrag: employee.rutavdrag,
+            rutavdrag: customer.rutavdrag,
             customer: {
-                namn: employee.namn,
-                gatuaddress: employee.gatuaddress,
-                postnummer: employee.postnummer,
-                postord: employee.postort,
-                telefonnummer: employee.telefonnummer,
-                rutavdrag: employee.rutavdrag,
+                namn: customer.namn,
+                gatuaddress: customer.gatuaddress,
+                postnummer: customer.postnummer,
+                postord: customer.postort,
+                telefonnummer: customer.telefonnummer,
+                rutavdrag: customer.rutavdrag,
             },
             tasks: {},
             totalPrice: 0,
             employee: 'Hannes',
             description: 'Okänt',
+        })
+    }
+}
+
+export function addUppdrag(aktivaUppdrag, id) {
+    const keysToAdd = aktivaUppdrag.map(uppdrag => uppdrag.id)
+    console.log(keysToAdd)
+
+    return dispatch => {
+        firebaseApp.database().ref(`/drafts/${id}`).update({
+            tasks: keysToAdd,
         })
     }
 }
