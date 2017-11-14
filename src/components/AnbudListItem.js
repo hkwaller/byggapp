@@ -7,7 +7,7 @@ const AnbudListItem = props => {
     return (
         <div className="anbud-list-item-container">
             <h3>
-                { props.anbud.description || 'Okänt' } ({ props.anbud.tasks ? Object.keys(props.anbud.tasks).length : '0' } uppdrag)
+                { props.anbud.description || 'Okänt' } ({ props.anbud.tasks ? Object.keys(props.anbud.tasks).length : '0' } uppdrag)
             </h3>
             <div className="information">
                 <Customer info={ props.anbud.customer } />

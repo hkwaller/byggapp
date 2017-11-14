@@ -16,11 +16,21 @@ function Assignment(props) {
     const anbud = props.anbud[props.match.params.id]
 
     return (
-        <div className="assignment-container">
-            <SubHeader title={ anbud.description } />
-            <Customer info={ anbud.customer } />
-            <Information rot={ anbud.rot } info={ anbud.info } />
-            <Tasks tasks={ anbud.tasks } />
+        <div className="assignment-outer-container">
+            <div className="assignment-container">
+                <SubHeader title={ anbud.description } />
+                <Customer info={ anbud.customer } />
+                <Information rot={ anbud.rot } info={ anbud.info } />
+                <Tasks tasks={ anbud.tasks } />
+            </div>
+            <div className="assignment-guarantee">
+                <h2>Garanti</h2>
+                <div>10-års garanti på tätskiktet i badrummet.</div>
+                <div>Allrisk och byggförsäkring via Folksam.</div>
+                <div>Kvadivtetsdokument och el-protokoll.</div>
+                <div>A-konto fakturering sker.</div>
+                
+            </div>
         </div>
     )
 }

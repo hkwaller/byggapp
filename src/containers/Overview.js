@@ -15,7 +15,7 @@ const Overview = props => {
     }
 
     return (
-        <div className="container">
+        <div className="overview-container">
             <div className="new-assignment-container">
                 {
                     <Link to={ `/newcustomer/${Object.keys(props.anbud).length + Object.keys(props.drafts).length + 1}` } className="new-assignment-btn">

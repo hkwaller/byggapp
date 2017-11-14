@@ -1,9 +1,15 @@
+.customer-outer-container {
+    display: flex; 
+    flex: 1; 
+    flex-direction: column;
+}
+
 .customer-container {
     display: flex;
     flex-direction: row;
     flex: 1;
     width: 60%;
-    padding: 2em 0;
+    padding: 0 0 2em 0;
 }
 
 .legend {
